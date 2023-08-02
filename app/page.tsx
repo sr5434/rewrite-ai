@@ -30,9 +30,9 @@ export default function Page() {
         scrollToBios();
       },
     });
-  const onSubmit = (e: any) => {
+  const onSubmit = async (e: any) => {
     //console.log(input)
-    setBio(input);
+    await setBio(input);
     handleSubmit(e);
   };
 
@@ -55,7 +55,7 @@ export default function Page() {
         <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
           Rewrite text using AI
         </h1>
-        <h2>Thanks to @Nutlope on GitHub for his amazing template. There is a link to it on the GitHub repo. You may have to click the generate button twice for the AI to properly rewrite your content.</h2>
+        <h2 className="pt-2">Thanks to @Nutlope on GitHub for his amazing template. There is a link to it on the GitHub repo.</h2>
         <form className="max-w-xl w-full" onSubmit={onSubmit}>
           <div className="flex mt-10 items-center space-x-3">
             <Image
